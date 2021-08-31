@@ -2,15 +2,17 @@
 
 ## Comparing two molecular graphs based on their maximum common connected edge subgraph
 
-This python code compares two molecular graphs by computing their maximum common connected edge subgraph (MCCES). Our method is based on an integer linear programming formulation for the maximum common edge subgraph problem[^ILP], to which we added connectivity constraints defined on the line graphs of both molecular graphs. We also added optional functionality to restrict the atom mappings to labels (e.g., identical coordination values). We used the number of MCCES edges to compute the Tversky index[^tversky] , which generalizes the Sorensen-Dice index and is more appropriate for local matching.  We implemented the algorithms in Python, using the networkx library and used Gurobi 9.1 to solve the underlying mathematical optimization problem.
+This python code compares two molecular graphs by computing their maximum common connected edge subgraph (MCCES). Our method is based on an integer linear programming formulation for the maximum common edge subgraph problem [[1]](#1), to which we added connectivity constraints defined on the line graphs of both molecular graphs. We also added optional functionality to restrict the atom mappings to labels (e.g., identical coordination values). We used the number of MCCES edges to compute the Tversky index [[2]](#2) , which generalizes the Sorensen-Dice index and is more appropriate for local matching.  We implemented the algorithms in Python, using the networkx library and used Gurobi 9.1 to solve the underlying mathematical optimization problem.
 
-The code is based on code written by Jan Seipp[^thesis_jan] for the maximum common edge subgraph problem[^ILP] (without connectivity constraints).    
+The code is based on code written by Jan Seipp [[3]](#3) for the maximum common edge subgraph problem [[1]](#1) (without connectivity constraints). 
 
-[^ILP]: Bahiense, L., Manić, G., Piva, B. & De Souza, C. C. The maximum common edge subgraph problem: A polyhedral investigation. Discret. Appl. Math.160, 2523–2541 (2012).
+## References   
 
-[^tversky]: Tversky, A. Features of similarity. Psychol. Rev.84, 327–352 (1977).
+<a id="1">[1]</a>  Bahiense, L., Manić, G., Piva, B. & De Souza, C. C. The maximum common edge subgraph problem: A polyhedral investigation. Discret. Appl. Math.160, 2523–2541 (2012).
 
-[^thesis_jan]: Seipp, J. Fast Maximum Common Edge Subgraph Computation for Comparing Similar Molecular Structures. Master's thesis, Heinrich Heine University Düsseldorf, Germany (2021).
+<a id="1">[2]</a> Tversky, A. Features of similarity. Psychol. Rev.84, 327–352 (1977).
+
+<a id="1">[3]</a> Seipp, J. Fast Maximum Common Edge Subgraph Computation for Comparing Similar Molecular Structures. Master's thesis, Heinrich Heine University Düsseldorf, Germany (2021).
 
 ## Dependencies
 
@@ -67,3 +69,5 @@ The output are six files. Four `csv` files extend the vertex and edge files by a
 
 ![](./example_output_greg.jpg)
 
+## Author
+Gunnar W. Klau (gunnar.klau@hhu.de)
