@@ -48,6 +48,7 @@ Source,Target
 0,8
 1,9
 2,10
+...
 ```
 
 Each line represents an edge, given by source and target `idx` of the corresponding vertices.
@@ -63,7 +64,7 @@ Options:
   -c, --coordination  consider coordination [false]
 ```
 
-The output are six files. Four `csv` files extend the vertex and edge files by adding a columns indicating whether the corresponding vertex/edge is part of the MCCES. In addition, there are two `pdf` files, visualizing the MCCES within each original graph and giving the Tversky index in the upper right corner. Here are examples of such output `pdf` files for the corresponding input files:
+The output are six files. Four `csv` files extend the vertex and edge files by adding a colums indicating whether the corresponding vertex/edge is part of the MCCES. In addition, there are two `pdf` files, visualizing the MCCES within each original graph and giving the Tversky index in the upper right corner. Here are examples of such output `pdf` files for the corresponding input files:
 
 ![](./example_output_sf.jpg)
 
